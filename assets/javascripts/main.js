@@ -2,6 +2,7 @@ import '../stylesheets/main.scss';
 import mix from './common/mix';
 
 // render handlebar template
+// https://github.com/pcardune/handlebars-loader
 const template = require('./templates/sample.hbs');
 const html = template({ name: 'Handlebars' });
 const container = document.getElementById('results');
