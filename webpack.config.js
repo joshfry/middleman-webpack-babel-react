@@ -27,7 +27,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/,
@@ -40,12 +40,13 @@ module.exports = {
               options: {
                 plugins: function () {
                   return [
-                    require('autoprefixer')
+                    require('autoprefixer'),
                   ];
-                }
-              }
-            }
-          ]}),
+                },
+              },
+            },
+          ],
+        }),
       },
       {
         test: /\.scss$|.sass$/,
@@ -58,16 +59,20 @@ module.exports = {
               options: {
                 plugins: function () {
                   return [
-                    require('autoprefixer')
+                    require('autoprefixer'),
                   ];
-                }
-              }
+                },
+              },
             },
-            'sass-loader'
-          ]
+            'sass-loader',
+          ],
         }),
-      }
-    ]
+      },
+      {
+        test: /\.handlebars$|.hbs$/,
+        loader: 'handlebars-loader',
+      },
+    ],
   },
 
   plugins: [

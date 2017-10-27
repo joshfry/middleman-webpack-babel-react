@@ -1,6 +1,12 @@
 import '../stylesheets/main.scss';
 import mix from './common/mix';
 
+// render handlebar template
+const template = require('./templates/sample.hbs');
+const html = template({ name: 'Handlebars' });
+const container = document.getElementById('results');
+container.innerHTML = html;
+
 const myObj = { name: 'defaultName' };
 mix({ age: 33 }, myObj);
 

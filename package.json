@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "d3": "^4.5.0",
+    "handlebars": "^4.0.11",
+    "handlebars-loader": "^1.6.0",
     "sanitize.css": "^4.1.0"
   }
 }
