@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import mix from '../common/mix';
+import mix from './mix';
 
 /**
  * Creates a new EventFacade. Provides debugging and logs events to condsole.

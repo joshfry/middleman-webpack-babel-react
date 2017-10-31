@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import sampleUploads from '../sample-uploads';
+import sampleUploads from '../sample/sample-uploads';
 import UserPhoto from './UserPhoto';
 
 class UserPhotos extends Component {
@@ -12,7 +12,7 @@ class UserPhotos extends Component {
       uploads: {},
     };
 
-    // bind this to custom methods
+    // METHODS (bind this to custom methods)
     this.updateSelectedPhoto = this.updateSelectedPhoto.bind(this);
     this.addPhoto = this.addPhoto.bind(this);
   }

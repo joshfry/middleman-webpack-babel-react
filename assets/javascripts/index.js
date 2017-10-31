@@ -2,7 +2,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import '../stylesheets/main.scss';
+import '../stylesheets/index.scss';
 
 import UserPhotos from './components/UserPhotos';
 

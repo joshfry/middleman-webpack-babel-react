@@ -7,9 +7,12 @@
     <%= stylesheet_link_tag "second.bundle" %>
   </head>
   <body>
-    <h1>Middleman + Webpack</h1>
+    <%= partial "partials/site_nav" %>
 
+    <h1>Middleman + Webpack</h1>
     <p>Another page with a different JS entrypoint</p>
+    <div id="container"></div>
+
     <%= javascript_include_tag "second.bundle" %>
   </body>
 </html>

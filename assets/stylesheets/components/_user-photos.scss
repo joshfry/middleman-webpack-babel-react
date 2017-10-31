@@ -1,0 +1,16 @@
+// -------------------------------------------------------------------
+// .user-photos
+// -------------------------------------------------------------------
+
+.user-photos {
+  &__thumb {
+    border: 10px solid transparent;
+    float: left;
+    outline: none;
+    width: 150px;
+
+    &[data-selected='true'] {
+      border: 10px solid $red;
+    }
+  }
+}
