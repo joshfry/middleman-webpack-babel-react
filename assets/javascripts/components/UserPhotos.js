@@ -8,11 +8,13 @@ class UserPhotos extends Component {
 
     this.state = {
       selected: '',
+      selectedFilename: '',
       uploads: {},
     };
 
     // bind this to custom methods
     this.updateSelectedPhoto = this.updateSelectedPhoto.bind(this);
+    this.addPhoto = this.addPhoto.bind(this);
   }
 
   componentWillMount() {
@@ -21,6 +23,16 @@ class UserPhotos extends Component {
     this.setState({
       uploads: sampleUploads,
     });
+  }
+
+  addPhoto(photo) {
+    // get a copy of existing state
+    const uploads = Object.assign({}, this.state.uploads);
+    // update fish
+    const timeStamp = Date.now();
+    uploads[`photo-${timeStamp}`] = photo;
+    // set state
+    this.setState({ uploads }); // shorthand for { fishes: fishes }
   }
 
   updateSelectedPhoto(selected, selectedFilename) {
@@ -43,7 +55,7 @@ class UserPhotos extends Component {
           )
         }
         <br clear="all" />
-        <h1>Selected: {this.state.selected || 'Select Photo'}</h1>
+        <h1>Id: {this.state.selected || 'Select Photo'}</h1>
       </div>
     );
   }
