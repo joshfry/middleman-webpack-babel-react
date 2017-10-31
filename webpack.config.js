@@ -4,7 +4,7 @@ var Clean = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './assets/javascripts/main.js',
+    index: './assets/javascripts/index.js',
     second: './assets/javascripts/second.js',
   },
 

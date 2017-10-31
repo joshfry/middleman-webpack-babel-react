@@ -25,11 +25,11 @@ myClass.eventFacade = new EventFacade({ enableDebug: true });
 myClass.eventFacade.bind('Event.Facade', function() { console.log('Event.Facade callback'); });
 myClass.eventFacade.trigger('Event.Facade', { data: 'it works!' });
 
-// import addBounceToLogo from './logo';
+import addBounceToLogo from './logo';
 
-// addBounceToLogo();
-// Add your sweet sweet JS here
-// console.log('hi');
+addBounceToLogo();
+Add your sweet sweet JS here
+console.log('hi');
 
 /*
 // GET SET EXAMPLE

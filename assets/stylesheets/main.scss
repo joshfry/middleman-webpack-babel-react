@@ -12,3 +12,20 @@ svg {
   width: 30%;
   padding: 3rem;
 }
+
+img {
+  max-width: 100%;
+}
+
+.user-photos {
+  &__thumb {
+    float: left;
+    width: 150px;
+    border: 10px solid transparent;
+    outline: none;
+
+    &[data-selected='true'] {
+      border: 10px solid red;
+    }
+  }
+}
