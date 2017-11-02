@@ -27,7 +27,9 @@ activate :directory_indexes
 #
 activate :external_pipeline,
   name: :webpack,
-  command: build? ?  "yarn run build" : "yarn run start",
+  # using yarn command at `./node_modules/yarn/bin/yarn`
+  # because it won't be globally installed on build server
+  command: build? ?  "./node_modules/yarn/bin/yarn run build" : "./node_modules/yarn/bin/yarn run start",
   source: ".tmp/dist",
   latency: 1
 
