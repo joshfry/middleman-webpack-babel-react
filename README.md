@@ -20,3 +20,7 @@ Edit the `entry` section of [webpack.config.js](webpack.config.js) as necessary.
 ## CSS
 
 This uses SASS and PostCSS but you can alter those loaders to fit your taste.
+
+## Tests
+
+Run `npm test` to run Jest tests in background and watch for changes.
