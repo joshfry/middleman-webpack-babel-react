@@ -8,7 +8,15 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development ./node_modules/webpack/bin/webpack.js --watch -d --color",
-    "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p"
+    "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p",
+    "test": "jest --watch"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^config$": "./webpack-config.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/fileMock.js",
+      "\\.(css|scss|less)$": "<rootDir>/config/jest/styleMock.js"
+    }
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
@@ -18,16 +26,19 @@
     "clean-webpack-plugin": "^0.1.15",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-beta",
+    "jest-cli": "^21.2.1",
     "node-sass": "^4.5.0",
     "postcss": "^5.2.12",
     "postcss-loader": "^1.2.2",
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
+    "webpack-babel-jest": "^1.0.4",
     "yarn": "^1.2.1"
   },
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+    "file-loader": "^1.1.5",
     "handlebars": "^4.0.11",
     "handlebars-loader": "^1.6.0",
     "jquery": "^3.2.1",

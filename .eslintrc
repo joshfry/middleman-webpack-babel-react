@@ -10,5 +10,9 @@
     "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   },
-  "globals": {}
+  "globals": {
+    // jest tests
+    "it": true,
+    "expect": true,
+  }
 }

@@ -56,6 +56,7 @@ class UserPhotos extends Component {
         }
         <br clear="all" />
         <h1>Id: {this.state.selected || 'Select Photo'}</h1>
+        <img src="/images/logo.svg" width="100" height="100" alt="" />
       </div>
     );
   }
